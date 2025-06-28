@@ -1,0 +1,27 @@
+# File: .github/workflows/lint-markdown.yml
+name: Reusable Lint Markdown Workflow
+
+on:
+  workflow_call:
+    inputs:
+      markdown_globs:
+        required: false
+        type: string
+        default: "**/*.md"
+    secrets:
+      # Optional: define if you want to allow secrets to be passed in
+      GH_TOKEN:
+        required: false
+
+jobs:
+  lint-markdown:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          config: .markdownlint.yaml
+          globs: ${{ inputs.markdown_globs }}
