@@ -1,5 +1,5 @@
 # .github/workflows/lint.yml in consumer repo
-name: Lint markdown
+name: Invoke Lint markdown
 
 on:
   pull_request:

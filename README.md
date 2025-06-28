@@ -22,10 +22,10 @@ This reusable GitHub Actions workflow lints Markdown files using markdownlint-cl
 
 Location for workflow files: [repository workflows](./repository%20workflows/)
 
-## Generate ToC caller
+## Invoke Generate ToC
 
 This workflow triggers a shared GitHub Action to automatically update the Table of Contents in the README.md file by invoking a shared reusable workflow from apaivinen/shared-workflows.
 
-## Lint markdown caller
+## Invoke Lint markdown
 
 This workflow lints Markdown files by invoking a shared reusable workflow from apaivinen/shared-workflows.
