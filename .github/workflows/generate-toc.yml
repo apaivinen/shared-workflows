@@ -1,0 +1,51 @@
+# shared-workflows/.github/workflows/generate-toc.yml
+
+name: Generate TOC
+
+on:
+  workflow_call:  # Allows this to be used from other repositories
+    inputs:
+      target_file:
+        required: false
+        type: string
+        default: README.md
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install markdown-toc
+        run: npm install -g markdown-toc
+
+      - name: Generate TOC
+        run: markdown-toc -i "${{ inputs.target_file }}"
+
+      - name: Normalize list bullets to dashes (only inside TOC)
+        run: |
+          awk '
+            BEGIN { toc=0 }
+            /<!-- toc -->/ { toc=1; print; next }
+            /<!-- tocstop -->/ { toc=0; print; next }
+            toc == 1 {
+              sub(/^[[:space:]]*[*+]/, "  -")
+            }
+            { print }
+          ' "${{ inputs.target_file }}" > temp.md && mv temp.md "${{ inputs.target_file }}"
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${{ inputs.target_file }}"
+          git commit -m "chore: update TOC (dash style)" || echo "No changes to commit"
+          git push
