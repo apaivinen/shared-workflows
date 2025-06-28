@@ -2,6 +2,14 @@
 
 <!-- toc -->
 
+- [About Repository](#about-repository)
+- [Workflows](#workflows)
+  - [Generate ToC](#generate-toc)
+  - [Lint markdown](#lint-markdown)
+- [Workflows for other repositories](#workflows-for-other-repositories)
+  - [Invoke Generate ToC](#invoke-generate-toc)
+  - [Invoke Lint markdown](#invoke-lint-markdown)
+
 <!-- tocstop -->
 
 # About Repository
