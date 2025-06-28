@@ -1,7 +1,7 @@
 # .github/workflows/generate-toc.yml
 # Restricted only to the main branch and README.md file.
 
-name: Generate TOC
+name: Invoke Generate TOC
 
 on:
   push:
