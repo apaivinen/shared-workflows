@@ -10,9 +10,6 @@ on:
         type: string
         default: README.md
 
-permissions:
-  contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
