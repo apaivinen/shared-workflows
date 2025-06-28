@@ -34,6 +34,6 @@ jobs:
       - name: Lint Markdown
         uses: DavidAnson/markdownlint-cli2-action@v19
         with:
-          #config: .markdownlint.yaml
+          config: .markdownlint.yaml
           globs: ${{ inputs.markdown_globs }}
 
