@@ -1,4 +1,4 @@
-# .github/workflows/generate-toc.yml
+# .github/workflows/invoke-generate-toc.yml
 # Restricted only to the main branch and README.md file.
 
 name: Invoke Generate TOC
