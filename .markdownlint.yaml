@@ -1,4 +1,5 @@
-# Source: https://github.com/MicrosoftDocs/PowerShell-Docs/.markdownlint.yaml
+# Original file source: https://github.com/MicrosoftDocs/PowerShell-Docs/blob/2472d5d3ffd90862d11d2d6dfeb9faa1fba7523c/.markdownlint.yaml
+# Docs: https://github.com/DavidAnson/markdownlint?tab=readme-ov-file
 ---
 docsmd.alert: true
 docsmd.codesnippet: true
