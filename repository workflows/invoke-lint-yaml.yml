@@ -1,0 +1,19 @@
+# .github/workflows/invoke-lint-yaml.yml
+name: Invoke Lint YAML
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/*.yml"
+      - ".github/workflows/*.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    uses: apaivinen/shared-workflows/.github/workflows/lint-yaml.yml@main
+    with:
+      yaml_files: ".github/workflows"
+      exclude_paths: "^(Content/|Overrides/)" # optional, adjust as needed

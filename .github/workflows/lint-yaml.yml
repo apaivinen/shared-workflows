@@ -1,0 +1,34 @@
+# shared-workflows/.github/workflows/lint-yaml.yml
+name: Reusable Lint YAML Workflow
+
+on:
+  workflow_call:  # 👈 Makes this reusable
+
+    inputs:
+      yaml_files:
+        type: string
+        required: false
+        default: "./.github ./"
+
+      exclude_paths:
+        type: string
+        required: false
+        default: "^(Content/|Overrides/)"  # optional, adjust as needed
+
+jobs:
+  lint-yaml:
+    name: Run YAML Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Make lint script executable
+        run: chmod +x .scripts/lint-yaml.sh
+
+      - name: Lint YAML files
+        env:
+          YAML_FILES: ${{ inputs.yaml_files }}
+          EXCLUDE_PATHS: ${{ inputs.exclude_paths }}
+        run: .scripts/lint-yaml.sh
+        shell: bash
