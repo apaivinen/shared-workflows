@@ -6,9 +6,13 @@
 - [Workflows](#workflows)
   - [Generate ToC](#generate-toc)
   - [Lint markdown](#lint-markdown)
+  - [Lint yaml](#lint-yaml)
+- [Scripts](#scripts)
+  - [lint-yaml.sh](#lint-yamlsh)
 - [Workflows for other repositories](#workflows-for-other-repositories)
   - [Invoke Generate ToC](#invoke-generate-toc)
   - [Invoke Lint markdown](#invoke-lint-markdown)
+  - [Invoke Lint yaml](#invoke-lint-yaml)
 
 <!-- tocstop -->
 
