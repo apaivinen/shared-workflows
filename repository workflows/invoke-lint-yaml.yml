@@ -1,5 +1,5 @@
 # .github/workflows/invoke-lint-yaml.yml
-name: Invoke Lint YAML
+name: Invoke Shared Lint YAML Workflow
 
 on:
   pull_request:

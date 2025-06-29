@@ -1,6 +1,6 @@
 # shared-workflows/.github/workflows/generate-toc.yml
 
-name: Generate TOC
+name: Reusable Generate TOC Workflow
 
 on:
   workflow_call:  # Allows this to be used from other repositories
