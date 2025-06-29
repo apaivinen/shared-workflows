@@ -3,7 +3,7 @@
 
 name: Reusable Generate TOC Workflow
 
-on:
+on: # yamllint disable-line rule:truthy
   workflow_call:  # Allows this to be used from other repositories
     inputs:
       target_file:

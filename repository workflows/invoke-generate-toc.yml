@@ -4,7 +4,7 @@
 
 name: Invoke shared Generate TOC workflow
 
-on:
+on: # yamllint disable-line rule:truthy
   push:
     branches:
       - main

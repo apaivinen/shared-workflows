@@ -3,7 +3,7 @@
 
 name: Reusable Lint Markdown Workflow
 
-on:
+on: # yamllint disable-line rule:truthy
   workflow_call:
     inputs:
       markdown_globs:

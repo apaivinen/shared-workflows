@@ -3,7 +3,7 @@
 
 name: Invoke Shared Lint YAML Workflow
 
-on:
+on: # yamllint disable-line rule:truthy
   pull_request:
     paths:
       - ".github/workflows/*.yml"

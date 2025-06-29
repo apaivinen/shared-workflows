@@ -10,10 +10,6 @@ rules:
     max: 200
   truthy: enable  # keep truthy rule enabled globally
 
-per-file-ignores:
-  ".github/workflows/*.yml":
-    - truthy
-
 # yamllint disable rule:line-length
 #
 # References:
