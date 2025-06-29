@@ -1,4 +1,4 @@
-# .github/workflows/lint.yml in consumer repo
+# .github/workflows/invoke-lint-markdown.yml in consumer repo
 name: Invoke Lint markdown
 
 on:
