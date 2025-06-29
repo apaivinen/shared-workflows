@@ -1,7 +1,7 @@
 # shared-workflows/.github/workflows/lint-yaml.yml
 ---
 
-name: Reusable Lint YAML Workflow
+name: Shared Lint YAML Workflow
 
 on:  # yamllint disable-line rule:truthy
   workflow_call:  # 👈 Makes this reusable

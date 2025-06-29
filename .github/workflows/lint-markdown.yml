@@ -1,7 +1,7 @@
 # File: .github/workflows/lint-markdown.yml
 ---
 
-name: Reusable Lint Markdown Workflow
+name: Shared Lint Markdown Workflow
 
 on: # yamllint disable-line rule:truthy
   workflow_call:

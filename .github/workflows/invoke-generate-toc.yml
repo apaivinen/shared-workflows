@@ -2,7 +2,7 @@
 # Restricted only to the main branch and README.md file.
 ---
 
-name: Invoke shared Generate TOC workflow
+name: Invoke Shared Generate TOC Workflow
 
 on: # yamllint disable-line rule:truthy
   push:
