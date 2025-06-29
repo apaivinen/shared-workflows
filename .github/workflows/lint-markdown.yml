@@ -1,4 +1,6 @@
 # File: .github/workflows/lint-markdown.yml
+---
+
 name: Reusable Lint Markdown Workflow
 
 on:
@@ -36,4 +38,3 @@ jobs:
         with:
           config: .markdownlint.yaml
           globs: ${{ inputs.markdown_globs }}
-

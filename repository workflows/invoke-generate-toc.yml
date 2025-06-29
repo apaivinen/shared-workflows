@@ -1,7 +1,8 @@
 # .github/workflows/invoke-generate-toc.yml
 # Restricted only to the main branch and README.md file.
+---
 
-name: Invoke Shared Generate TOC Workflow
+name: Invoke shared Generate TOC workflow
 
 on:
   push:
@@ -13,7 +14,7 @@ on:
 
 permissions:
   contents: write
-    
+
 jobs:
   toc:
     uses: apaivinen/shared-workflows/.github/workflows/generate-toc.yml@main

@@ -1,4 +1,6 @@
 # shared-workflows/.github/workflows/lint-yaml.yml
+---
+
 name: Reusable Lint YAML Workflow
 
 on:

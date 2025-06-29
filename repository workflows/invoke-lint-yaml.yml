@@ -1,4 +1,6 @@
 # .github/workflows/invoke-lint-yaml.yml
+---
+
 name: Invoke Shared Lint YAML Workflow
 
 on:
