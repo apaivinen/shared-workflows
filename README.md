@@ -29,7 +29,7 @@ Invoker workflows uses shared workflows from their own repositories.
 
 ### Generate ToC
 
-This reusable workflow (`generate-toc.yml`) automates the generation and normalization of a Markdown Table of Contents (TOC) and is designed to be invoked from other repositories using `workflow_call`. It accepts an optional `target_file` input (defaulting to `README.md`), installs `markdown-toc`, inserts or updates the TOC between `<!-- toc -->` and `<!-- tocstop -->` markers, and uses `awk` to normalize list bullets to dashes for Markdown linting compliance. If changes are detected, it commits and pushes the updated file back to the repository, streamlining TOC maintenance across projects.
+This reusable workflow (`generate-toc.yml`) automates the generation and normalization of a Markdown Table of Contents (TOC) and is designed to be invoked from other repositories using `workflow_call`. It accepts an optional `target_file` input (defaulting to `README.md`), installs `markdown-toc`, inserts or updates the TOC between `<!-- to&#99; -->` and `<!-- tocst&#111;p -->` markers, and uses `awk` to normalize list bullets to dashes for Markdown linting compliance. If changes are detected, it commits and pushes the updated file back to the repository, streamlining TOC maintenance across projects.
 
 ### Lint markdown
 
